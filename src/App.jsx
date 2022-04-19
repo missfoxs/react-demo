@@ -1,45 +1,112 @@
-import { useState } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import { useState } from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+const data = [
+  {
+    productCatagoryId: "1468461019837612033",
+    generalKey: "Portable Power Stations",
+    name: "Portable Power Stations",
+    pid: "0",
+    parent: true,
+    hasParent: true,
+    sort: 0,
+    accessory: false,
+    subs: [
+      {
+        productCatagoryId: "1468461339749761025",
+        generalKey: "RIVER Series",
+        name: "RIVER Series",
+        pid: "1468461019837612033",
+        parent: false,
+        hasParent: false,
+        sort: 0,
+        accessory: false,
+      },
+      {
+        productCatagoryId: "1468461504103563266",
+        generalKey: "DELTA Series",
+        name: "DELTA Series",
+        pid: "1468461019837612033",
+        parent: false,
+        hasParent: false,
+        sort: 0,
+        accessory: false,
+      },
+    ],
+  },
+  {
+    productCatagoryId: "1468461916013576194",
+    generalKey: "Solar Panels",
+    name: "Solar Panels",
+    pid: "0",
+    parent: false,
+    hasParent: false,
+    sort: 0,
+    accessory: false,
+  },
+  {
+    productCatagoryId: "1468462465052164098",
+    generalKey: "Smart Devices",
+    name: "Smart Devices",
+    pid: "0",
+    parent: true,
+    hasParent: true,
+    sort: 0,
+    accessory: false,
+    subs: [
+      {
+        productCatagoryId: "1468463971339976706",
+        generalKey: "Smart Home Panel",
+        name: "Smart Home Panel",
+        pid: "1468462465052164098",
+        parent: false,
+        hasParent: false,
+        sort: 0,
+        accessory: false,
+      },
+      {
+        productCatagoryId: "1468464717938671617",
+        generalKey: "Smart Generator",
+        name: "Smart Generator",
+        pid: "1468462465052164098",
+        parent: false,
+        hasParent: false,
+        sort: 0,
+        accessory: false,
+      },
+      {
+        productCatagoryId: "1468464952693866498",
+        generalKey: "Solar Tracker",
+        name: "Solar Tracker",
+        pid: "1468462465052164098",
+        parent: false,
+        hasParent: false,
+        sort: 0,
+        accessory: false,
+      },
+    ],
+  },
+  {
+    productCatagoryId: "1468462698259660801",
+    generalKey: "Accessories",
+    name: "Accessories",
+    pid: "0",
+    parent: false,
+    hasParent: false,
+    sort: 0,
+    accessory: true,
+  },
+];
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.jsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {' | '}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
