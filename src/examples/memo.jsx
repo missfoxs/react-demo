@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useCallback, useMemo, useState } from "react";
 
 const Child = React.memo(
   ({ count, step }) => {
@@ -19,9 +19,19 @@ const Child = React.memo(
   }
 );
 
+const ChildWithFn = React.memo(({ fn }) => {
+  fn();
+  return <div>{console.log("CHILD render")}CHILD</div>;
+});
+
 export default () => {
   const [count, setCount] = useState(0);
   const [step, setStep] = useState(0);
+
+  // 添加useCallback再传给子组件时，props没有变化，因此不会重新渲染。不用加memo的第二个参数
+  const fn = useCallback(() => {
+    console.log("fn");
+  }, []);
 
   return (
     <div className="App">
@@ -32,7 +42,8 @@ export default () => {
       <button type="button" onClick={() => setStep(step => step + 1)}>
         step{step}
       </button>
-      <Child count={count} step={step}></Child>
+      {/* <Child count={count} step={step}></Child> */}
+      <ChildWithFn fn={fn} />
     </div>
   );
 };
