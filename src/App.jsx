@@ -1,6 +1,7 @@
 import { useState } from "react";
 import logo from "./logo.svg";
 import "./App.css";
+import EditableTree from "./editable-tree";
 
 const data = [
   {
@@ -100,11 +101,9 @@ const data = [
 ];
 
 function App() {
-  const [count, setCount] = useState(0);
-
   return (
     <div className="App">
-      
+      <EditableTree treeData={data}></EditableTree>
     </div>
   );
 }
