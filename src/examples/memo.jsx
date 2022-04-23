@@ -19,6 +19,7 @@ const Child = React.memo(
   }
 );
 
+// React.memo会进行参数进行一个浅对比，用useCallback或者useMemo时地址没有变，因此不会重新渲染。
 const ChildWithFn = React.memo(({ fn }) => {
   fn();
   return <div>{console.log("CHILD render")}CHILD</div>;
