@@ -5,7 +5,7 @@ const initCount = c => {
   return c * 2;
 };
 
-export default () => {
+export default props => {
   // const [count1, setCount1] = useState(initCount(0));
   // const [count2, setCount2] = useState(0);
   // console.log("render");
@@ -25,6 +25,7 @@ export default () => {
   //     </button>
   //   </div>
   // );
+  console.log("props", props);
 
   const [count, dispatch] = useReducer((x, payload) => x + payload, 0);
   return (
