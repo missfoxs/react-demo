@@ -9,6 +9,7 @@ import TestReactChild from "./examples/test-react-child";
 import TestCreatePortal from "./examples/test-createPortal";
 import TestUerRef from "./examples/test-uer-ref";
 import TestUseTranstion from "./examples/test-useTranstion";
+import TestUseDeferredValue from "./examples/test-useDeferredValue";
 
 function App() {
   return (
@@ -19,9 +20,10 @@ function App() {
       {/* <TestUseState /> */}
       {/* <TestSuspense /> */}
       {/* <TestReactChild /> */}
-      <TestCreatePortal />
+      {/* <TestCreatePortal /> */}
       {/* <TestUerRef /> */}
       {/* <TestUseTranstion /> */}
+      <TestUseDeferredValue />
     </>
   );
 }

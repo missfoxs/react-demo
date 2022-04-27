@@ -1,7 +1,7 @@
 import React, { useState, useTransition } from "react";
 import { fakeNames as names } from "../js/faker-name";
 
-function ListItem({ name, highlight }) {
+export function ListItem({ name, highlight }) {
   const index = name.toLowerCase().indexOf(highlight.toLowerCase());
   if (index === -1) {
     return <div>{name}</div>;
@@ -9,7 +9,7 @@ function ListItem({ name, highlight }) {
   return (
     <div>
       {name.slice(0, index)}
-      <span className="highlight">
+      <span className="highlight" style={{ color: "red" }}>
         {name.slice(index, index + highlight.length)}
       </span>
       {name.slice(index + highlight.length)}

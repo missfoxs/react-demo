@@ -26,7 +26,7 @@ export default () => {
   const [content, setContent] = useState('<img src="x" onerror="alert(1)" />');
   return (
     <>
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      {/* <div dangerouslySetInnerHTML={{ __html: content }} /> */}
       <div onClick={() => setIsOpen(true)}>open</div>
       <Modal isOpen={isOpen} />
     </>
