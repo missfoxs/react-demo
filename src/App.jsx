@@ -19,9 +19,9 @@ function App() {
       {/* <TestUseState /> */}
       {/* <TestSuspense /> */}
       {/* <TestReactChild /> */}
-      {/* <TestCreatePortal /> */}
+      <TestCreatePortal />
       {/* <TestUerRef /> */}
-      <TestUseTranstion />
+      {/* <TestUseTranstion /> */}
     </>
   );
 }

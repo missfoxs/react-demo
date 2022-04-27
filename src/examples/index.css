@@ -1,0 +1,7 @@
+.modalWrap {
+  width: 500px;
+  height: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  position: fixed;
+}
