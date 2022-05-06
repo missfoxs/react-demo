@@ -12,6 +12,25 @@ import TestUseTranstion from "./examples/test-useTranstion";
 import TestUseDeferredValue from "./examples/test-useDeferredValue";
 
 function App() {
+  console.log(<TestUseDeferredValue />);
+  console.log((<TestUseDeferredValue />).type);
+
+  const getData = () => {
+    return new Promise(resolve => {
+      setTimeout(() => {
+        resolve(1000);
+      }, 2000);
+    });
+  };
+
+  const importFn = async () => {
+    const res = await getData();
+    return res;
+  };
+  importFn().then(res => {
+    console.log(res);
+  });
+  
   return (
     <>
       {/* <Memo /> */}
@@ -23,7 +42,7 @@ function App() {
       {/* <TestCreatePortal /> */}
       {/* <TestUerRef /> */}
       {/* <TestUseTranstion /> */}
-      <TestUseDeferredValue />
+      {/* <TestUseDeferredValue /> */}
     </>
   );
 }
