@@ -3,6 +3,7 @@ import "./App.css";
 import Example from "./examples";
 import Form from "./form-about";
 import Emotion from "./emotion";
+import DnD from "./dnd";
 
 export default function () {
   return (
@@ -10,6 +11,7 @@ export default function () {
       {/* <Example /> */}
       {/* <Form /> */}
       <Emotion />
+      {/* <DnD /> */}
     </>
   );
 }
