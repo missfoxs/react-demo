@@ -10,7 +10,7 @@ export default function () {
     <>
       {/* <Example /> */}
       {/* <Form /> */}
-      <Emotion />
+      {/* <Emotion /> */}
       {/* <DnD /> */}
     </>
   );

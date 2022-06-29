@@ -2,10 +2,10 @@
 import React, { useRef, useState } from "react";
 import {
   DndProvider,
-  DropTargetMonitor,
+  // DropTargetMonitor,  // vite里面报这个方法找不到，不知道啥原因
   useDrag,
   useDrop,
-  XYCoord
+  // XYCoord
 } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
 // import "./styles.css";
